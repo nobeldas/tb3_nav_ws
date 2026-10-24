@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(tb3_nav_demo)
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY launch worlds config maps DESTINATION share/${PROJECT_NAME})
+install(PROGRAMS scripts/send_goal.py DESTINATION lib/${PROJECT_NAME})
+ament_package()
